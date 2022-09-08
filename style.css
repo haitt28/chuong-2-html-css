@@ -1,0 +1,53 @@
+.boxed {
+    width: 20rem;
+    height: 20rem;
+    /* background-color: #ffa400; */
+    background-image: linear-gradient(to right bottom, #00aefd, #ffa400);
+}
+.titile {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 2rem;
+    display: inline-block;
+    color: transparent;
+    background-image: linear-gradient(to right bottom, #00aefd, #ffa400);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.background {
+    width: 40rem;
+    height: 20rem;
+    background-image: linear-gradient(to right bottom, rgba(0, 174, 255, 0.829), rgba(255, 166, 0, 0.597)),
+        url("https://images.unsplash.com/photo-1662294850098-fd24ff1c021d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60");
+    background-size: cover; /* Phủ hết màn hình tùy vào độ rộng của thẻ đứng trước nó   */
+    background-repeat: no-repeat;
+    margin-bottom: 2rem;
+}
+
+/* Nếu trình duyệt không hỗ trợ thuộc tính nào đó ta sử dụng */
+/* vào trang web caniuse để check thuộc tính đó có được trình duyệt hỗ trọ không */
+@supports not (-webkit-background-clip: text) {
+    .titile {
+        background-image: linear-gradient(to right bottom, rgba(0, 174, 255, 0.829), rgba(255, 166, 0, 0.597)),
+            url("https://images.unsplash.com/photo-1662294850098-fd24ff1c021d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60");
+        background-size: cover; /* Phủ hết màn hình tùy vào độ rộng của thẻ đứng trước nó   */
+        background-repeat: no-repeat;
+    }
+}
+/* phân biệt opacity: 0, display:none, visibility:hidden*/
+.boxed34 {
+    width: 5rem;
+    height: 6rem;
+    background-color: #ffa400;
+    margin: 0 auto;
+    cursor: pointer;
+    /* opacity ẩn màu thẻ */
+    opacity: 0;
+    /* ẩn các thuộc tính của thẻ */
+    visibility: hidden;
+    /* ẩn thẻ   */
+    display: none;
+}
+p:first-child {
+    color: #ffa400;
+}
